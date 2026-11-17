@@ -65,18 +65,30 @@ withDefaults(
 
 /* Sizes */
 .button--sm {
-  padding: 10px 16px;
-  font-size: 12px;
+  padding: var(--space-2) var(--space-3);
+
+  /* Font style */
+  font-family: var(--font-inter);
+  font-size: var(--text-sm);
+  font-weight: var(--font-weight-medium);
 }
 
 .button--md {
-  padding: 14px 24px;
-  font-size: 14px;
+  padding: var(--space-3) var(--space-4);
+
+  /* Font style */
+  font-family: var(--font-inter);
+  font-size: var(--text-md);
+  font-weight: var(--font-weight-medium);
 }
 
 .button--lg {
-  padding: 18px 32px;
-  font-size: 16px;
+  padding: var(--space-4) var(--space-5);
+
+  /* Font style */
+  font-family: var(--font-inter);
+  font-size: var(--text-lg);
+  font-weight: var(--font-weight-medium);
 }
 
 /* States */
