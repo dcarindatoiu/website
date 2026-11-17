@@ -37,9 +37,10 @@ withDefaults(
     color: var(--colors-text);
     font-family: var(--font-mono);
     text-transform: uppercase;
-    letter-spacing: var(--leading-normal);
+    letter-spacing: var(--tracking-caps);
     font-size: var(--text-sm);
     font-weight: var(--font-weight-medium);
+
   
     cursor: pointer;
     position: relative;
