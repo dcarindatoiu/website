@@ -1,0 +1,8 @@
+:root {
+    --ease:     cubic-bezier(.7, 0, .2, 1);
+    --duration: 300ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --duration: 0ms; }
+}

@@ -1,0 +1,33 @@
+:root {
+    color-scheme: dark;
+
+  /* ---------------------------------------------------------------------
+     PRIMITIVES · Color
+     --------------------------------------------------------------------- */
+  --violet-900: #040309;   /* page background */
+  --violet-850: #16132B;   /* glass bottom, menus */
+  --violet-800: #2B2550;   /* glass top */
+  --violet-500: #8B5CF6;   /* brand */
+  --violet-400: #A78BFA;   /* accent text */
+  --violet-300: #C4B5FD;   /* hover text */
+  --violet-100: #E9E4FF;   /* glass rim end */
+  --gray-50:    #F3EFF8;   /* text — 18:1 on bg */
+  --gray-400:   #A29CB0;   /* muted text — 7.7:1 on bg */
+  --gray-600:   #6E6878;   /* subtle — 3.8:1, large/disabled only */
+
+  /* ---------------------------------------------------------------------
+     SEMANTIC · Color   (use these in components)
+     --------------------------------------------------------------------- */
+  --bg:            var(--violet-900);
+  --surface:       var(--violet-850);
+  --surface-raised:var(--violet-800);
+  --text:          var(--gray-50);
+  --text-muted:    var(--gray-400);
+  --text-subtle:   var(--gray-600);
+  --accent:        var(--violet-500);
+  --accent-text:   var(--violet-400);
+  --accent-hover:  var(--violet-300);
+  --on-accent:     #FFFFFF;              /* 4.2:1 — 15px semibold+ only */
+  --border:        rgb(255 255 255 / .15);
+  --focus:         var(--violet-400);
+}

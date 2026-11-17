@@ -1,0 +1,5 @@
+:root {
+    --radius-md:   0.875rem;  /* 14  menu rows */
+    --radius-lg:   1.5rem;    /* 24  panels */
+    --radius-pill: 999px;     /* buttons, chips, nav */
+}

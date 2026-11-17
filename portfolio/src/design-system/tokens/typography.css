@@ -1,0 +1,36 @@
+:root {
+    color-scheme: dark;
+
+    /* --- Families --- */
+    --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+    --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+    --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", monospace;
+
+    /* --- Weights --- */
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+    --font-display: "Fraunces", Georgia, serif;
+    --font-sans:    "Inter", system-ui, -apple-system, sans-serif;
+    --font-mono:    "JetBrains Mono", ui-monospace, monospace;
+
+    /* Size scale — rem, display sizes fluid with clamp(min, fluid, max) */
+    --text-xs:   0.6875rem;                               /* 11px  eyebrow */
+    --text-sm:   0.875rem;                                /* 14px  labels, buttons, subtitle */
+    --text-md:   1rem;                                    /* 16px  body */
+    --text-lg:   1.1875rem;                               /* 19px  lead */
+    --text-xl:   1.75rem;                                 /* 28px  card / panel titles */
+    --text-2xl:  clamp(1.75rem, 1rem + 2.5vw, 3.5rem);    /* 28→56  e-mail, section titles */
+    --text-3xl:  clamp(2.75rem, 1rem + 6vw, 7rem);        /* 44→112 project title */
+    --text-4xl:  clamp(3.75rem, 1rem + 8.5vw, 9.375rem);  /* 60→150 "Let's talk." */
+
+    --leading-tight:  0.95;   /* display */
+    --leading-normal: 1.45;   /* mono, labels */
+    --leading-loose:  1.6;    /* body */
+
+    --tracking-tight: -0.03em;  /* display */
+    --tracking-wide:   0.04em;  /* mono subtitle */
+    --tracking-caps:   0.14em;  /* eyebrow */
+}
