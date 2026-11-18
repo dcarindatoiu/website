@@ -35,6 +35,7 @@ withDefaults(
     /* Glass Effect */
     background: var(--glass-background);
     border-radius: var(--radius-pill);
+    backdrop-filter: var(--glass-blur);
 }
 
 .nav::before {

@@ -5,6 +5,8 @@ import NavItem from '../molecules/NavItem.vue';
 import Nav from '../molecules/Nav.vue';
 import Logo from '../atoms/Logo.vue';
 import FrostButton from '../atoms/FrostButton.vue';
+import FrostIcon from '../atoms/FrostIcon.vue';
+import { VolumeX } from 'lucide-vue-next';
 
 withDefaults(
   defineProps<{
@@ -28,8 +30,12 @@ withDefaults(
         <div
             class = "header-actions"
         >
-            <FrostButton size="md">
-                Contact me
+            <FrostIcon size="sm">
+                <VolumeX class = "icon icon--sm"/>
+            </FrostIcon>
+
+            <FrostButton size="sm">
+                Contáctame
             </FrostButton>
         </div>
 
@@ -41,6 +47,7 @@ withDefaults(
 .header {
     /* Padding */
     padding: var(--space-6) var(--space-10);
+
     /* Fixed Header */
     position: fixed;
     top: 0;
@@ -55,9 +62,33 @@ withDefaults(
 }
 
 .header-actions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
     /* Padding */
     width: fit-content;
     gap: var(--space-2);
+}
+
+.icon {
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.icon--sm {
+  width: 1rem;
+  height: 1rem;
+}
+
+.icon--md {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.icon--lg {
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 </style>

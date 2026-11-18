@@ -45,7 +45,7 @@ select {
 html {
   height: 100%;
   overflow: hidden;
-  font-size: clamp(12px, 1.1111111111vw, 1.1111111111vw);
+  font-size: clamp(14px, calc(100vw / 130),  calc(100vw / 130));
 
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;

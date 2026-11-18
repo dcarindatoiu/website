@@ -30,15 +30,18 @@ withDefaults(
   display: flex;
   align-items: center;
   justify-content: center;
-
   gap: var(--space-2);
-  background: var(--glass-fill);
-  border-radius: var(--radius-pill);
-  
+
   width: fit-content;
 
+  /* Font details */
+  font-family: var(--font-sans);
+  font-weight: var(--font-weight-regular);
+
+  /* Frosted Glass */
+  background: var(--glass-fill);
+  border-radius: var(--radius-pill);
   border: var(--focus-ring);
-  
   backdrop-filter: blur(--glass-blur);
   -webkit-backdrop-filter: blur(--glass-blur);
 
@@ -65,30 +68,25 @@ withDefaults(
 
 /* Sizes */
 .button--sm {
-  padding: var(--space-2) var(--space-3);
+  padding: var(--space-2) var(--space-4);
 
   /* Font style */
-  font-family: var(--font-inter);
   font-size: var(--text-sm);
-  font-weight: var(--font-weight-medium);
+  
 }
 
 .button--md {
   padding: var(--space-3) var(--space-4);
 
   /* Font style */
-  font-family: var(--font-inter);
   font-size: var(--text-md);
-  font-weight: var(--font-weight-medium);
 }
 
 .button--lg {
   padding: var(--space-4) var(--space-5);
 
   /* Font style */
-  font-family: var(--font-inter);
   font-size: var(--text-lg);
-  font-weight: var(--font-weight-medium);
 }
 
 /* States */

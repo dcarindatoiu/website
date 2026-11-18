@@ -31,15 +31,15 @@ withDefaults(
   
     /* Padding and width */
     width: fit-content;
-    padding: var(--space-2) var(--space-3);
+    padding: var(--space-1) var(--space-3);
 
     /* Font Style */
-    color: var(--colors-text);
+    color: var(--text-muted);
     font-family: var(--font-mono);
     text-transform: uppercase;
     letter-spacing: var(--tracking-caps);
-    font-size: var(--text-sm);
-    font-weight: var(--font-weight-medium);
+    font-size: var(--text-xs);
+    font-weight: var(--font-weight-regular);
 
   
     cursor: pointer;
@@ -48,6 +48,7 @@ withDefaults(
 
 .nav-item--active {
     /* Glass Effect */
+    color: var(--text);
     background: var(--glass-accent);
     border-radius: var(--radius-pill);
 }
