@@ -9,6 +9,6 @@ import IdentityBlock from './design-system/components/molecules/IdentityBlock.vu
 
   <IdentityBlock/>
 
-  <img src="./assets/images/home.png" style="width: 100%; z-index: -999;">
+  <img src="./assets/images/BlackHole2k.png" style="width: 100%; z-index: -999;">
   
 </template>

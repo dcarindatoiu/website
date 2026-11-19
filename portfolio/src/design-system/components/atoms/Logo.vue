@@ -8,7 +8,8 @@ withDefaults(
 </script>
 
 <template>
-    <a
+    <a 
+        href="/"
         class="display-logo"
     >
         Carindatoiu
@@ -18,6 +19,7 @@ withDefaults(
 <style scoped>
 
 .display-logo {
+
     /* Padding and width */
     width: fit-content;
 
@@ -27,6 +29,7 @@ withDefaults(
     text-transform: capitalize;
     font-style: italic;
     font-size: var(--font-lg);
+
 }
 
 </style>

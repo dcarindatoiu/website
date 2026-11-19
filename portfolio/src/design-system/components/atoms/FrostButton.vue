@@ -4,12 +4,10 @@ withDefaults(
   defineProps<{
     size?: 'sm' | 'md' | 'lg'
     disabled?: boolean
-    type?: 'button' | 'submit' | 'reset'
   }>(),
   {
     size: 'md',
     disabled: false,
-    type: 'button',
   }
 )
 </script>
@@ -19,7 +17,6 @@ withDefaults(
     class="button"
     :class="`button--${size}`"
     :disabled="disabled"
-    :type="type"
   >
     <slot />
   </button>
@@ -41,7 +38,6 @@ withDefaults(
   /* Frosted Glass */
   background: var(--glass-fill);
   border-radius: var(--radius-pill);
-  border: var(--focus-ring);
   backdrop-filter: blur(--glass-blur);
   -webkit-backdrop-filter: blur(--glass-blur);
 
@@ -52,18 +48,24 @@ withDefaults(
 
 .button::before {
   
+  /* Frosted Glass Stroke */
   background: var(--glass-outline);
   border-radius: inherit;
   content: "";
-  inset: 0;
+
+  /* Frosted Padding */
+  inset: calc(-1 * var(--outline-stroke-width));
+  padding: var(--outline-stroke-width);
   
+  /* Frosted Glass Stroke Composite */
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
-  padding: 1px;
+
   pointer-events: none;
   position: absolute;
+
 }
 
 /* Sizes */

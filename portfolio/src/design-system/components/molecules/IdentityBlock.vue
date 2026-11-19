@@ -1,13 +1,6 @@
 
 <script setup lang="ts">
 
-import FrostButton from '../atoms/FrostButton.vue';
-import FrostIcon from '../atoms/FrostIcon.vue';
-import { Mail } from 'lucide-vue-next';
-
-import Github from '../../../assets/icons/github.svg'
-import Linkedin from '../../../assets/icons/linkedin.svg'
-
 withDefaults(
   defineProps<{
   }>(),
@@ -20,37 +13,11 @@ withDefaults(
         class="identity-block"
     >
 
-        <div class="identity-group">
+        <span>CV · 2026</span>
 
-            <span>CV · 2026</span>
+        <h3>Desarrollador Full-Stack & Mobile Developer</h3>
 
-            <h3>Desarrollador Full-Stack & Mobile Developer</h3>
-
-            <span>Zaragoza, Spain · 30.13° N 118.17° E</span>
-
-        </div>
-
-        <div class="social-group">
-            <FrostIcon size="sm">
-                <Mail class="icon--sm" />
-            </FrostIcon>
-            <FrostIcon size="sm">
-                <img
-                    :src="Github"
-                    :alt="`Github logo`"
-                    class="icon--sm"
-                    style="width: 1rem; height: 1rem;"
-                />
-            </FrostIcon>
-            <FrostIcon size="sm">
-                <img
-                    :src="Linkedin"
-                    :alt="`Linkedin logo`"
-                    class="icon--sm"
-                    style="width: 1rem; height: 1rem; color: #fff;"
-                />
-            </FrostIcon>
-        </div>
+        <span>Zaragoza, Spain · 30.13° N 118.17° E</span>
 
     </div>
 </template>
@@ -74,27 +41,7 @@ withDefaults(
     align-items: start;
     justify-content: center;
     width: fit-content;
-    gap: var(--space-5)
-}
-
-.identity-group {
-    /* Display Style */
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: center;
-    width: fit-content;
-    gap: var(--space-1)
-}
-
-.social-group {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-
-    /* Padding */
-    width: fit-content;
-    gap: var(--space-2);
+    gap: var(--space-2)
 }
 
 span {

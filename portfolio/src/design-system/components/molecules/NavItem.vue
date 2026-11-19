@@ -12,13 +12,15 @@ withDefaults(
 </script>
 
 <template>
-    <a
+    <li>
+        <a
         :href="href"
         class="nav-item"
         :class="{ 'nav-item--active': active }"
-    >
-        <slot />
-    </a>
+        >
+            <slot />
+        </a>
+    </li>
 </template>
 
 <style scoped>
@@ -41,7 +43,6 @@ withDefaults(
     font-size: var(--text-xs);
     font-weight: var(--font-weight-regular);
 
-  
     cursor: pointer;
     position: relative;
 }
@@ -53,19 +54,4 @@ withDefaults(
     border-radius: var(--radius-pill);
 }
 
-.nav-item--active::before {
-    /* Glass effect */
-    background: var(--glass-outline);
-    border-radius: inherit;
-    content: "";
-    inset: 0;
-    
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-    padding: 1px;
-    pointer-events: none;
-    position: absolute;
-}
 </style>

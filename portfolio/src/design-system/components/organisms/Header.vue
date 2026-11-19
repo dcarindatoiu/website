@@ -3,9 +3,6 @@
 
 import NavItem from '../molecules/NavItem.vue';
 import Nav from '../molecules/Nav.vue';
-import Logo from '../atoms/Logo.vue';
-import FrostButton from '../atoms/FrostButton.vue';
-import FrostIcon from '../atoms/FrostIcon.vue';
 import { VolumeX } from 'lucide-vue-next';
 
 withDefaults(
@@ -19,24 +16,24 @@ withDefaults(
     <div
         class="header"
     >
-        <Logo/>
+        <div class="bar">
 
-        <Nav>
-            <NavItem href="/" :active="true"> Home </NavItem>
-            <NavItem href="/projects"> Projects </NavItem>
-            <NavItem href="/contact"> Contact </NavItem>
-        </Nav>
+            <div class="icon-group logo-container">
+                <img src="../../../assets/icons/logo.svg" class="icon--md"/>
+            </div>
 
-        <div
-            class = "header-actions"
-        >
-            <FrostIcon size="sm">
-                <VolumeX class = "icon icon--sm"/>
-            </FrostIcon>
+            <Nav>
+                <NavItem href="/" :active="true"> Home </NavItem>
+                <NavItem href="/projects"> Projects </NavItem>
+                <NavItem href="/about-me"> About Me </NavItem>
+                <NavItem href="/contact"> Contact </NavItem>
+            </Nav>
 
-            <FrostButton size="sm">
-                Contáctame
-            </FrostButton>
+            <div class="icon-group">
+                <VolumeX class="icon--sm"/>
+            </div>
+            
+
         </div>
 
     </div>
@@ -56,19 +53,63 @@ withDefaults(
     z-index: 100;
 
     /* Display Style */
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+
 }
 
-.header-actions {
+.bar {
+    /* Display Style */
+    width: max-content;
     display: flex;
-    flex-direction: row;
+    align-items: stretch;
+    gap: var(--space-9);
+
+    padding: var(--space-2);
+
+    /* Glass Effect */
+    background: var(--glass-dark-fill);
+    border-radius: var(--radius-pill);
+    backdrop-filter: var(--glass-blur);
+}
+
+.bar::before {
+    /* Glass effect */
+    background: var(--glass-dark-outline);
+    border-radius: inherit;
+    content: "";
+
+    /* Frosted Padding */
+    inset: calc(-1 * var(--outline-stroke-width));
+    padding: var(--outline-stroke-width);
+    
+    /* Frosted Glass Stroke Composite */
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+
+    pointer-events: none;
+    position: absolute;
+}
+
+.icon-group {
+    /* Display Style */
+    display: flex; 
+    justify-content: center; 
     align-items: center;
 
-    /* Padding */
-    width: fit-content;
-    gap: var(--space-2);
+    /* Square */
+    height: 1.6243rem;
+    aspect-ratio: 1; 
+}
+
+.logo-container {
+    /* Accent Container */
+    color: var(--text);
+    background: var(--glass-accent);
+    border-radius: var(--radius-pill);
 }
 
 .icon {
@@ -77,8 +118,8 @@ withDefaults(
 }
 
 .icon--sm {
-  width: 1rem;
-  height: 1rem;
+  width: var(--icon-size-sm);
+  height: var(--icon-size-sm);
 }
 
 .icon--md {

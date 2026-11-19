@@ -8,49 +8,25 @@ withDefaults(
 </script>
 
 <template>
-    <div
+    <ul
         class="nav"
     >
         <slot />
-    </div>
+    </ul>
 </template>
 
 <style scoped>
 
 .nav {
-    position: relative;
-}
-
-.nav {
     /* Display Style */
     display: flex;
+    position: relative;
     align-items: center;
     justify-content: center;
   
     /* Padding and width */
     width: fit-content;
-    padding: var(--space-1);
     gap: var(--space-1);
-
-    /* Glass Effect */
-    background: var(--glass-background);
-    border-radius: var(--radius-pill);
-    backdrop-filter: var(--glass-blur);
 }
 
-.nav::before {
-    /* Glass effect */
-    background: var(--glass-outline-bg);
-    border-radius: inherit;
-    content: "";
-    inset: 0;
-    
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-    padding: 1px;
-    pointer-events: none;
-    position: absolute;
-}
 </style>
