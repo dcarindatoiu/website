@@ -1,8 +1,12 @@
 
 <script setup lang="ts">
+
+import type { RouteLocationRaw } from 'vue-router'
+
 withDefaults(
   defineProps<{
-    href: string
+    label: string
+    to: RouteLocationRaw
     active?: boolean
   }>(),
   {
@@ -13,13 +17,12 @@ withDefaults(
 
 <template>
     <li>
-        <a
-        :href="href"
-        class="nav-item"
-        :class="{ 'nav-item--active': active }"
+        <RouterLink :to="to" 
+            class="nav-item" 
+            :class="{ 'nav-item--active': active }"
         >
-            <slot />
-        </a>
+            {{ label }}
+        </RouterLink>
     </li>
 </template>
 

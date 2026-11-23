@@ -43,10 +43,8 @@ select {
 }
 
 html {
-  height: 100%;
-  overflow: hidden;
   font-size: clamp(14px, calc(100vw / 130),  calc(100vw / 130));
-
+  background-color: #040309;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }

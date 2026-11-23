@@ -1,9 +1,18 @@
 
 <script setup lang="ts">
-
 import NavItem from '../molecules/NavItem.vue';
 import Nav from '../molecules/Nav.vue';
 import { VolumeX } from 'lucide-vue-next';
+import { useRoute } from 'vue-router';
+
+const items = [
+    { label: 'Home', to: '/' },
+    { label: 'Projects', to: '/projects' },
+    { label: 'About', to: '/about' },
+    { label: 'Contact', to: '/contact' },
+]
+
+const route = useRoute() 
 
 withDefaults(
   defineProps<{
@@ -23,10 +32,12 @@ withDefaults(
             </div>
 
             <Nav>
-                <NavItem href="/" :active="true"> Home </NavItem>
-                <NavItem href="/projects"> Projects </NavItem>
-                <NavItem href="/about-me"> About Me </NavItem>
-                <NavItem href="/contact"> Contact </NavItem>
+                <NavItem 
+                    v-for="item in items"
+                    :label="item.label"
+                    :to="item.to"
+                    :active="route.name === item.label" 
+                />
             </Nav>
 
             <div class="icon-group">

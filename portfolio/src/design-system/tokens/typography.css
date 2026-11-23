@@ -22,9 +22,10 @@
     --text-md:   1rem;                                    /* 16px  body */
     --text-lg:   1.1875rem;                               /* 19px  lead */
     --text-xl:   1.75rem;                                 /* 28px  card / panel titles */
-    --text-2xl:  clamp(1.75rem, 1rem + 2.5vw, 3.5rem);    /* 28→56  e-mail, section titles */
-    --text-3xl:  clamp(2.75rem, 1rem + 6vw, 7rem);        /* 44→112 project title */
-    --text-4xl:  clamp(3.75rem, 1rem + 8.5vw, 9.375rem);  /* 60→150 "Let's talk." */
+    --text-2xl:  2rem;                                    /* 32px  big text */
+    --text-3xl:  3.125rem;                                /* 50px  hero title */
+    --text-4xl:  4.5rem;                                  /* 72px "Let's talk." */
+    --text-5xl:  7.625rem;                                /* 122px "Some dates of studies" */
 
     --leading-tight:  0.95;   /* display */
     --leading-normal: 1.45;   /* mono, labels */
