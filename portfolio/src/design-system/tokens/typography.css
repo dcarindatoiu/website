@@ -30,6 +30,7 @@
     --leading-tight:  0.95;   /* display */
     --leading-normal: 1.45;   /* mono, labels */
     --leading-loose:  1.6;    /* body */
+    --leading-relaxed: 2rem;  /* keyboard meta */
 
     --tracking-tight: -0.03em;  /* display */
     --tracking-wide:   0.04em;  /* mono subtitle */

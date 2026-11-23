@@ -5,7 +5,5 @@ import Header from './design-system/components/organisms/Header.vue';
 
 <template>
   <Header/>
-  
   <RouterView />
-  
 </template>

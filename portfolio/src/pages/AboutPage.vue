@@ -26,7 +26,8 @@ import { education } from '@/data/education';
         <!-- Aboute Me Section -->
         <section class="section">
             <HeaderSection label="01 - sobre mí" title="Sobre mí" />
-            <div class="section-content">
+            <div class="section-content__about">
+                <img src="@/assets/images/ipod.png" class="about__ipod">
                 <p class="text-bio">
                     Llevo programando desde hace mucho<br />
                     tiempo y he descubierto que un buen<br />
@@ -43,7 +44,7 @@ import { education } from '@/data/education';
                 <HeaderSection label="02 - proyectos" title="Proyectos destacados" />
             </div>
             <div class="section-content" style="width: 100%;">
-                <img src="@/assets/images/libros.png" style="width: 100%;">
+                <img src="@/assets/images/books.png" style="width: 100%;">
             </div>
         </section>
 
@@ -58,22 +59,56 @@ import { education } from '@/data/education';
         <!-- Habilities Section -->
         <section class="section section--full">
             <HeaderSection label="04 - habilidades" title="Habilidades" />
-            <div class="section-content">
+            <div class="section-content__keyboard">
                 <FrostContainer items="Hola">
-                    <div>
-                        <img src="@/assets/icons/github.svg" alt="">
-                        <span>Vue</span>
+                    <div class="habilities__container">
+                        <img src="@/assets/icons/brands/vue.svg" alt="">
+                        <span class="habilities__span" >Vue</span>
+                    </div>
+                    <div class="habilities__container">
+                        <img src="@/assets/icons/brands/nextjs_icon_dark.svg" alt="">
+                        <span class="habilities__span" >Next.js</span>
+                    </div>
+                    <div class="habilities__container">
+                        <img src="@/assets/icons/brands/figma.svg" alt="">
+                        <span class="habilities__span" >Figma</span>
+                    </div>
+                    <div class="habilities__container">
+                        <img src="@/assets/icons/brands/google-analytics.svg" alt="">
+                        <span class="habilities__span" >Google Analytics</span>
+                    </div>
+                    <div class="habilities__container">
+                        <img src="@/assets/icons/brands/git.svg" alt="">
+                        <span class="habilities__span" >Git</span>
+                    </div>
+                    <div class="habilities__container">
+                        <img src="@/assets/icons/brands/androidstudio.svg" alt="">
+                        <span class="habilities__span" >Android Studio</span>
+                    </div>
+                    <div class="habilities__container">
+                        <img src="@/assets/icons/brands/photoshop.svg" alt="">
+                        <span class="habilities__span" >Photoshop</span>
+                    </div>
+                    <div class="habilities__container">
+                        <img src="@/assets/icons/brands/notion.svg" alt="">
+                        <span class="habilities__span" >Notion</span>
+                    </div>
+                    <div class="habilities__container">
+                        <img src="@/assets/icons/brands/firebase.svg" alt="">
+                        <span class="habilities__span" >Firebase</span>
                     </div>
                 </FrostContainer>
+                <img src="@/assets/images/keyboard.png" style="height: 30.9375rem;">
+                <div class="keyboard__meta" >
+                    <span class="keyboard__meta-title">Vue</span>
+                    <span class="keyboard__meta-description" >Interfaces interactivas</span>
+                </div>
             </div>
         </section>
 
         <!-- Soft Skills Section -->
-        <section class="section">
+        <section class="section__stella">
             <HeaderSection label="05 - soft skills" title="Mi constelación" />
-            <div class="section-content">
-                
-            </div>
         </section>
 
         <!-- Education Section -->
@@ -107,6 +142,15 @@ import { education } from '@/data/education';
 
 .section {
     padding: 0rem 4.6875rem;
+}
+
+.section__stella {
+    height: 100svh;
+    padding: 0rem 4.6875rem;
+    background-image: url('@/assets/images/constelacion.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .full-section {
@@ -150,6 +194,64 @@ import { education } from '@/data/education';
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.section-content__about {
+    height: 100svh;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.section-content__keyboard {
+    
+    height: 100svh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.habilities__container {
+    display: flex;
+    flex-direction: column; 
+    padding: 4px 12px;
+    gap: var(--space-3);
+}
+
+.habilities__container img {
+    height: 2.5rem;
+}
+
+.habilities__span {
+    font-family: var(--font-mono);
+    font-size: var(--font-xs);
+    color: var(--text-muted);
+    text-align: center;
+}
+
+.keyboard__meta {
+    display: flex;
+    gap: var(--space-4);
+    align-items: end;
+}
+
+.keyboard__meta-title {
+    font-family: var(--font-display);
+    font-size: var(--text-2xl);
+    line-height: var(--leading-relaxed);
+}
+
+.keyboard__meta-description {
+    font-family: var(--font-mono);
+    font-size: var(--text-md);
+    color: var(--accent-text);
+}
+
+.about__ipod {
+    position: absolute;
+    left: var(--space-10);
+    height: 47.125rem;
 }
 
 </style>

@@ -18,16 +18,15 @@ withDefaults(
 <style scoped>
 .container {
     /* Display Style */
-    width: max-content;
-    display: flex;
-    align-items: stretch;
-    gap: var(--space-9);
+    display: grid;
+    grid-template-columns: repeat(9, max-content);
+    align-items: center;
 
     padding: var(--space-2);
 
     /* Glass Effect */
     background: var(--glass-dark-fill);
-    border-radius: var(--radius-pill);
+    border-radius: 1.75rem;
     backdrop-filter: var(--glass-blur);
 }
 
