@@ -16,7 +16,7 @@ He mantenido **el mismo contenido y diseño** a propósito: así las diferencias
 
 | Portatil |
 |:---:|
-|![Portatil](./docs/desktop.png) |
+|![Portatil](./tree/main/docs/desktop.png) |
 
 ---
 
